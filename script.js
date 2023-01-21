@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		let text = "";
 		const now = new Date();
 		const container = document.getElementsByTagName("tbody")[0];
+		const timeContainer = document.getElementById("now");
 		const dayNow = now.getDay() ? now.getDay() : 7; // sunday 0 -> 7
 		const hourNow = now.getHours();
 
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 		container.innerHTML = text;
+		timeContainer.innerHTML = now;
 	}
 
 
