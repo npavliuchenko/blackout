@@ -36,6 +36,11 @@ th {
     font-weight: normal;
 }
 
+thead th {
+    font-size: 1.6em;
+    padding: 0.5em;
+}
+
 td {
     font-size: 1.6em;
     line-height: 1.2em;
@@ -116,7 +121,12 @@ h1 {
     margin: 0.5em auto;
 }
 
-table {
+table,
+.meta {
     width: 100%;
     margin-bottom: 1.6em;
+}
+
+.meta {
+    font-style: italic;
 }
