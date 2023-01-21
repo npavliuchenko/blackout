@@ -1,0 +1,122 @@
+html,
+body,
+div,
+h1,
+label,
+input,
+button {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+html {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/**
+ * Table
+ */
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0.25em 0.5em;
+    border: 1px solid #bbb;
+}
+
+th {
+    font-weight: normal;
+}
+
+td {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    text-align: center;
+}
+td::before {
+    color: #333;
+}
+
+/* https://www.w3schools.com/charsets/ref_emoji.asp */
+/* palette = pastel red #ff6961 = https://convertingcolors.com/decimal-color-16738657.html */
+
+.on {
+    background: #fff;
+}
+.on::before {
+    content: "\2600";
+}
+
+.off {
+    background: #bbb;
+}
+.off::before {
+    content: "\2601";
+    position: relative;
+    top: 0.125em;
+}
+
+.hz {
+    background: #ddd;
+}
+.hz::before {
+    content: "?";
+}
+
+
+.today.off {
+    background: #ff817a;
+}
+.today.hz {
+    background: #ffb2ae;
+}
+
+
+/*.today {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.today::before {
+    color: #d31949;
+}*/
+
+.today.now {
+    border: 9px solid #c03032;
+    font-size: 3.2em;
+    line-height: 0.5;
+    padding: 0.125em 0.25em;
+}
+.today.now::before {
+    display: inline-block;
+    margin: 0 -1em;
+}
+
+/**
+ * Layout
+ */
+
+.wrapper {
+    width: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 0.5em auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1.6em;
+}
