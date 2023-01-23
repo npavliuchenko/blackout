@@ -5,7 +5,7 @@
   "lang": "uk",
   "background_color": "#eeeeee",
   "display": "standalone",
-  "start_url": "/blackout/index.html",
+  "start_url": "/blackout/",
   "scope": "/blackout/",
   "theme_color": "#eeeeee",
   "description": "Інтерактивний графік відключень електроенергії (Київ)",
