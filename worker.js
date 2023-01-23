@@ -8,6 +8,7 @@ const APP_PREFIX = 'kitich_blackout_'     // Identifier for this app (this needs
 const VERSION = 'v0.2'              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION
 const URLS = [ // list of urls to cache
+  '',
   'index.html',
   'script.js',
   'style.css',
@@ -21,6 +22,12 @@ const URLS = [ // list of urls to cache
 self.addEventListener('fetch', function (e) {
   console.log('fetch request : ' + e.request.url)
   e.respondWith(
+    caches.keys().then(keys => { 
+      keys.map(k=> {
+        console.log(k, ' found');
+      });
+    });
+
     caches.match(e.request).then(function (request) {
       if (request) { // if cache is available, respond with cache
         console.log('responding with cache : ' + e.request.url)
