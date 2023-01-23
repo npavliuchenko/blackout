@@ -8,7 +8,7 @@ const APP_PREFIX = 'kitich_blackout_'     // Identifier for this app (this needs
 const VERSION = 'v0.2'              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION
 const URLS = [ // list of urls to cache
-  '/',
+  '',
   'index.html',
   'script.js',
   'style.css',
