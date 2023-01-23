@@ -68,8 +68,6 @@ td::before {
 .off::before {
     /*content: "\2601";*/
     content: "\1F31A";
-    position: relative;
-    top: 0.125em;
 }
 
 .hz {

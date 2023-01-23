@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		const dayNow = now.getDay() ? now.getDay() : 7; // sunday 0 -> 7
 		const hourNow = now.getHours();
 
+		console.log('Updating', now);
+
 		// loop over rows - hours
 		for (let ih = 0; ih < 24; ih++) {
 
@@ -82,6 +84,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Run Lola run !
 	generateTable();
-
-	//@TODO: update highlights by timer
+	setInterval(generateTable, 15000); //@TODO: redraw only highlights ?
 });
