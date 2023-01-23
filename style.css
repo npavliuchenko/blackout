@@ -16,6 +16,7 @@ button {
 html {
     font-size: 14px;
     font-family: sans-serif;
+    background: #eee;
 }
 
 /**
@@ -57,14 +58,16 @@ td::before {
     background: #fff;
 }
 .on::before {
-    content: "\2600";
+    /*content: "\2600";*/
+    content: "\1F31E";
 }
 
 .off {
     background: #bbb;
 }
 .off::before {
-    content: "\2601";
+    /*content: "\2601";*/
+    content: "\1F31A";
     position: relative;
     top: 0.125em;
 }
@@ -73,7 +76,7 @@ td::before {
     background: #ddd;
 }
 .hz::before {
-    content: "?";
+    content: "\1F937";
 }
 
 
