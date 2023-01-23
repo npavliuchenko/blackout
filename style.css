@@ -17,6 +17,7 @@ html {
     font-size: 14px;
     font-family: sans-serif;
     background: #eee;
+    color: #333;
 }
 
 /**
@@ -30,7 +31,9 @@ table {
 td,
 th {
     padding: 0.25em 0.5em;
-    border: 1px solid #bbb;
+    /*border: 1px solid #bbb;*/
+    border: 3px solid #eee;
+    border-radius: 10px;
 }
 
 th {
@@ -42,6 +45,10 @@ thead th {
     padding: 0.5em;
 }
 
+th:first-child {
+    text-align: left;
+}
+
 td {
     font-size: 1.6em;
     line-height: 1.2em;
@@ -50,6 +57,10 @@ td {
 td::before {
     color: #333;
 }
+
+/**
+ * data
+ */
 
 /* https://www.w3schools.com/charsets/ref_emoji.asp */
 /* palette = pastel red #ff6961 = https://convertingcolors.com/decimal-color-16738657.html */
@@ -95,14 +106,27 @@ td::before {
 }*/
 
 .today.now {
-    border: 9px solid #c03032;
+    /*border: 9px solid #c03032;*/
     font-size: 3.2em;
     line-height: 0.5;
     padding: 0.125em 0.25em;
+    position: relative;
 }
 .today.now::before {
     display: inline-block;
     margin: 0 -1em;
+    position: relative;
+    z-index: 1;
+}
+.today.now::after {
+    content: "";
+    border: 9px solid #c03032;
+    position: absolute;
+    top: -9px;
+    left: -9px;
+    right: -9px;
+    bottom: -9px;
+    border-radius: 14px;
 }
 
 /**
@@ -115,7 +139,7 @@ td::before {
     margin: 0 auto;
 }
 
-h1 {
+.header {
     text-align: center;
     font-size: 1.6em;
     font-weight: normal;
@@ -130,4 +154,15 @@ table,
 
 .meta {
     font-style: italic;
+}
+
+select {
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #bbb;
+    color: #333;
+
+    border-radius: 5px;
 }
