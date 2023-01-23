@@ -8,14 +8,14 @@ const APP_PREFIX = 'kitich_blackout_'     // Identifier for this app (this needs
 const VERSION = 'v0.2'              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION
 const URLS = [ // list of urls to cache
-  'blackout/',
-  'blackout/index.html',
-  'blackout/script.js',
-  'blackout/style.css',
-  'blackout/icons/favicon.svg',
-  'blackout/icons/favicon-64.png',
-  'blackout/icons/favicon-192.png',
-  'blackout/icons/favicon-512.png',
+  '/',
+  '/index.html',
+  '/script.js',
+  '/style.css',
+  '/icons/favicon.svg',
+  '/icons/favicon-64.png',
+  '/icons/favicon-192.png',
+  '/icons/favicon-512.png',
 ]
 
 // Respond with cached resources
