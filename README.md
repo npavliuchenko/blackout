@@ -12,4 +12,6 @@ a tiny webpage to visualize the power outages schedule
  * [x] publish at github -> https://npavliuchenko.github.io/blackout/
  * [x] 3 groups + selection
  * [ ] configurable notifications ?
- * [ ] Dark / light theme ?
+ * [x] Dark / light theme ?
+ * [x] Icon packs
+ * [ ] Better 'now' highlight

@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	];
 
 	const selector = document.getElementById('selector');
+	const modeSwitch = document.getElementById('switch-mode');
+	const skinSwitch = document.getElementById('switch-skin');
+	const skinOptions = Array.from(skinSwitch.options).map(opt => opt.value);
 
 	/**
 	 * Generate row labels from template
@@ -109,12 +112,48 @@ document.addEventListener('DOMContentLoaded', function() {
 		generateTable();	
 	}
 
+	/**
+	 * Toggle dark / light mode
+	 */
+	function toggleMode() {
+		document.body.classList.toggle("dark");
+		localStorage.setItem("myColorMode", document.body.classList.contains("dark") ? "dark" : "light");
+	}
+
+	/**
+	 * Toggle icons skin
+	 */
+	function toggleSkin() {
+		skinOptions.map(opt => document.body.classList.remove(opt + "-skin"));
+		document.body.classList.add(skinSwitch.value + "-skin");
+		localStorage.setItem("mySkin", skinSwitch.value);
+	}
+
 
 	// handle group selector
 	selector.value = myGroup.toString();
 	selector.addEventListener("change", groupUpdate);
 
+
 	// Run Lola run !
 	groupUpdate();
-	setInterval(groupUpdate, 15000); //@TODO: redraw only highlights ?
+	if (window.location.href.indexOf("#debug") === -1) { // start auto-update if debug is off
+		setInterval(groupUpdate, 15000); //@TODO: redraw only highlights ?
+	}
+
+
+	// handle dark/light mode switch
+	if (localStorage.getItem("myColorMode") === "dark"
+		|| localStorage.getItem("myColorMode") === null && window.matchMedia 
+														&& window.matchMedia("(prefers-color-scheme: dark)").matches)
+	{
+    	toggleMode();
+	}
+	modeSwitch.addEventListener("click", toggleMode);
+
+
+	// handle skin switch (icons pack)
+	skinSwitch.value = localStorage.getItem("mySkin") || "emoji";
+	toggleSkin();
+	skinSwitch.addEventListener("change", toggleSkin);
 });

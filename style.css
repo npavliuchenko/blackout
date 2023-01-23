@@ -16,9 +16,13 @@ button {
 html {
     font-size: 14px;
     font-family: sans-serif;
+}
+
+body {
     background: #eee;
     color: #333;
 }
+
 
 /**
  * Table
@@ -54,12 +58,10 @@ td {
     line-height: 1.2em;
     text-align: center;
 }
-td::before {
-    color: #333;
-}
+
 
 /**
- * data
+ * Data
  */
 
 /* https://www.w3schools.com/charsets/ref_emoji.asp */
@@ -69,46 +71,34 @@ td::before {
     background: #fff;
 }
 .on::before {
-    /*content: "\2600";*/
-    content: "\1F31E";
-}
-
-.off {
-    background: #bbb;
-}
-.off::before {
-    /*content: "\2601";*/
-    content: "\1F31A";
+    content: " ";
 }
 
 .hz {
-    background: #ddd;
+    background: #ccc;
 }
 .hz::before {
-    content: "\1F937";
+    content: " ";
 }
 
-
-.today.off {
-    background: #ff817a;
+.off {
+    background: #999;
 }
+.off::before {
+    content: " ";
+}
+
 .today.hz {
     background: #ffb2ae;
 }
-
-
-/*.today {
-    padding-left: 2em;
-    padding-right: 2em;
+.today.off {
+    background: #ff817a;
 }
-.today::before {
-    color: #d31949;
-}*/
 
 .today.now {
     /*border: 9px solid #c03032;*/
     font-size: 3.2em;
-    line-height: 0.5;
+    line-height: 0.6em;
     padding: 0.125em 0.25em;
     position: relative;
 }
@@ -129,6 +119,42 @@ td::before {
     border-radius: 12px;
 }
 
+
+body.emoji-skin .on::before {
+    content: "\1F31E";
+}
+body.emoji-skin .hz::before {
+    content: "\1F937";
+}
+body.emoji-skin .off::before {
+    content: "\1F31A";
+}
+
+body.geometric-skin .on::before {
+    content: "\25EF";
+}
+body.geometric-skin .hz::before {
+    content: "\25C8";
+}
+body.geometric-skin .off::before {
+    content: "\25BE";
+}
+
+body.text-skin .on::before {
+    content: "є";
+}
+body.text-skin .hz::before {
+    content: "??";
+}
+body.text-skin .off::before {
+    content: "ніт";
+}
+
+body.minimal-skin .today.now,
+body.text-skin .today.now {
+    font-size: 1.6em;
+}
+
 /**
  * Layout
  */
@@ -139,11 +165,15 @@ td::before {
     margin: 0 auto;
 }
 
+.header,
+.toolbar {
+    font-size: 2em;
+    margin: 1em auto 0.5em;
+}
+
 .header {
     text-align: center;
-    font-size: 1.6em;
-    font-weight: normal;
-    margin: 1em auto 0.5em;
+    margin-top: 1em;
 }
 
 table,
@@ -156,13 +186,104 @@ table,
     font-style: italic;
 }
 
-select {
+select,
+button {
+    display: inline-block;
     font-size: 1em;
-    padding: 0.5em 1.5em;
-    width: 100%;
+    padding: 0.5em 1em;
     text-align: center;
-    border: 1px solid #bbb;
+    border: 1px solid #999;
+    background: transparent;
     color: #333;
+    height: 2.2em;
+    vertical-align: middle;
 
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.header select {
+    width: 100%;
+}
+
+.toolbar {
+    margin-bottom: 1em;
+}
+
+#switch-mode {
+    /*background: #333;
+    color: #ccc;*/
+}
+#switch-mode::before {
+    content: "\25D1";
+}
+#switch-mode .light {
+    display: inline-block;
+}
+#switch-mode .dark {
+    display: none;
+}
+
+#switch-skin {
+    text-align: left;
+}
+
+
+/**
+ * Dark mode
+ */
+
+body.dark {
+    background-color: #333;
+    color: #ccc;
+}
+
+body.dark #switch-mode {
+    /*background-color: #eee;
+    color: #333;*/
+}
+body.dark #switch-mode .light {
+    display: none;
+}
+body.dark #switch-mode .dark {
+    display: inline-block;
+}
+
+body.dark td,
+body.dark th {
+    border-color: #333;
+}
+
+body.dark .on {
+    background-color: #888;
+}
+body.dark .hz {
+    background-color: #555;
+}
+body.dark .off {
+    background-color: #222;
+}
+
+
+/*body.dark .today.hz {
+    background-color: #6e423f;
+}
+body.dark .today.off {
+    background-color: #431917;
+}*/
+body.dark .today.hz {
+    background-color: #6e423f;
+}
+body.dark .today.off {
+    background-color: #640000;
+}
+
+body.dark .today.now::after {
+    border-color: #ff6961;
+}
+
+body.dark select,
+body.dark button {
+    border-color: #888;
+    color: #ccc;
 }
