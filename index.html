@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
 
+    <link rel="canonical" href="https://npavliuchenko.github.io/blackout/" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
@@ -60,17 +61,12 @@
             Оновлено о <span id="now"></span>.
         </div>
 
-        <!-- <div class="readme">
-            Для власників Android:
-
-            <ol>
-                <li>Відкрити меню браузера (іконка з 3 крапками в правому верхньому кутку)</li>
-                <li>Зберегти сторінку для офлайн-доступу (іконка стрілочка вниз в меню)</li>
-                <li>Додати сторінку на головний екран (іконка зі смартфоном та стрілочкою в меню)</li>
-                <li>Відкривати графік одним тапом навіть без інтернету&nbsp;&mdash; PROFIT!!!</li>
-            </ol>
-
-        </div> -->
+        <script>
+            // register ServiceWorker
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('/blackout/worker.js', {scope: '/blackout/'})
+            }
+        </script>
 
     </div>
 
