@@ -76,10 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 		container.innerHTML = text;
-		timeContainer.innerHTML = now;
+		timeContainer.innerHTML = now.toLocaleTimeString();
 	}
 
 
 	// Run Lola run !
 	generateTable();
+
+	//@TODO: update highlights by timer
 });

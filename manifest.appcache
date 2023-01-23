@@ -1,7 +1,10 @@
 CACHE MANIFEST
-# Version 0.1
+# Version 0.2
 
 index.html
 script.js
 style.css
-favicon.svg
+manifest.json
+icons/favicon.svg
+icons/favicon-192.png
+icons/favicon-512.png
