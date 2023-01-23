@@ -1,10 +1,10 @@
 {
-  "id": "kitich_blackout",
+  "id": "blackout",
   "short_name": "Відключення (Київ)",
   "name": "Графік відключень електроенергії (Київ)",
   "lang": "uk",
   "background_color": "#eeeeee",
-  "display": "standalone",
+  "display": "browser",
   "start_url": "/index.html",
   "scope": "/",
   "theme_color": "#eeeeee",
