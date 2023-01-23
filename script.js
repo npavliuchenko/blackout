@@ -116,5 +116,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Run Lola run !
 	groupUpdate();
-	setInterval(groupUpdate, 15000); //@TODO: redraw only highlights ?
+	// setInterval(groupUpdate, 15000); //@TODO: redraw only highlights ?
 });

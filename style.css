@@ -122,11 +122,11 @@ td::before {
     content: "";
     border: 9px solid #c03032;
     position: absolute;
-    top: -9px;
-    left: -9px;
-    right: -9px;
-    bottom: -9px;
-    border-radius: 14px;
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    bottom: -7px;
+    border-radius: 12px;
 }
 
 /**

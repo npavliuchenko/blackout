@@ -2,16 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="64"
-   height="64"
-   viewBox="0 0 64 64"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="favicon.svg"
-   inkscape:export-filename="favicon-512.png"
-   inkscape:export-xdpi="768"
-   inkscape:export-ydpi="768"
+   inkscape:export-filename="favicon-64.png"
+   inkscape:export-xdpi="12"
+   inkscape:export-ydpi="12"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="8"
-     inkscape:cx="11.3125"
-     inkscape:cy="43.375"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="185.96908"
+     inkscape:cy="268.70058"
      inkscape:window-width="1920"
      inkscape:window-height="950"
      inkscape:window-x="-9"
@@ -62,7 +62,8 @@
          id="stop2845" /></linearGradient></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
+     id="layer1"
+     transform="scale(8)"><rect
        style="fill:#333333;stroke-width:0.264583"
        id="rect234"
        width="64"
@@ -74,7 +75,7 @@
        sodipodi:insensitive="true" /><g
        id="g5088"
        style="display:inline"
-       transform="matrix(2.3205014,0,0,2.3205014,-16.102618,-43.351026)"
+       transform="matrix(2.1340348,0,0,2.1340348,-12.237276,-37.296106)"
        inkscape:label="v7 (recolor, rounded)"><path
          id="path7560"
          style="display:inline;opacity:1;fill:url(#yellow);fill-opacity:1;stroke:none;stroke-width:2.28478"
