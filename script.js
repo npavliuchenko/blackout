@@ -156,4 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	skinSwitch.value = localStorage.getItem("mySkin") || "emoji";
 	toggleSkin();
 	skinSwitch.addEventListener("change", toggleSkin);
+
+
+	// register a mock of service worker to enable installation for elder browsers
+	console.log('self', self);
+	self.addEventListener("fetch", () => {});
 });
