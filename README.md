@@ -2,6 +2,18 @@
 
 a tiny webpage to visualize the power outages schedule
 
+==================
+
+## Development
+
+To serve from localhost: 
+```
+cd ..
+python -m http.server 8000
+../ngrok http 8000
+```
+
+To prevent page from auto-updating add #debug to url.
 
 ==================
 
