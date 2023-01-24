@@ -5,13 +5,13 @@
  */
 
 const APP_PREFIX = 'kitich_blackout_'     // Identifier for this app (this needs to be consistent across every cache update)
-const VERSION = 'v0.2'              // Version of the off-line cache (change this value everytime you want to update cache)
+const VERSION = 'v0.3'              // Version of the off-line cache (change this value everytime you want to update cache)
 const CACHE_NAME = APP_PREFIX + VERSION
 const URLS = [ // list of urls to cache
-  '',
   'index.html',
   'script.js',
   'style.css',
+  'manifest.json',
   'icons/favicon.svg',
   'icons/favicon-64.png',
   'icons/favicon-192.png',
@@ -22,12 +22,6 @@ const URLS = [ // list of urls to cache
 self.addEventListener('fetch', function (e) {
   console.log('fetch request : ' + e.request.url)
 
-  caches.keys().then(keys => { 
-    keys.map(k=> {
-      console.log(k, ' found');
-    });
-  });
-    
   e.respondWith(
     caches.match(e.request).then(function (request) {
       if (request) { // if cache is available, respond with cache
@@ -37,12 +31,9 @@ self.addEventListener('fetch', function (e) {
         console.log('file is not cached, fetching : ' + e.request.url)
         return fetch(e.request)
           .catch(() => {
-            return caches.match('index.html')
+            return caches.match('index.html') // root redirect fails for unknown reason, so return index.html if fetch fails
           });
       }
-
-      // You can omit if/else for console.log & put one line below like this too.
-      // return request || fetch(e.request)
     })
   )
 })
