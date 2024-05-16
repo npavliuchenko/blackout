@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
-	var myGroup = localStorage.getItem('myGroup') || 3;
+	var myGroup = localStorage.getItem('myGroup') || 6;
 	const timeLabelTemplate = "%starthour:00 - %endhour:00";
 	const days = ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]; // use 1..7 indexes for compatibility with Date
 	const dataClass = {
@@ -14,36 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
 		// coding used: * - power off, _ - power on, ? - grey zone
 		// empty elements are to shift indexes to match Date days and DTEK groups indexing
 		[], // group 0 (does not exist)
-		[	"",	// group 1
+
+		// 2024 schedule
+		[], // group 1
+		[], // group 2
+		[], // group 3
+		[], // group 4
+		[], // group 5
+		[	"",	// group 6
 		    //12345678901234567890123
-			"****__???****__???****__", // 1 = Пн / Mon
-			"???****__???****__???***", // 2 = Вт / Tue
-			"*__???****__???****__???", // 3 = Ср / Wed
-			"****__???****__???****__", // 4 = Чт / Thu
-			"???****__???****__???***", // 5 = Пт / Fri
-			"*__???****__???****__???", // 6 = Сб / Sat
-			"****__???****__???****__", // 7 = Нд / Sun
+			"*???__****???__****???__", // 1 = Пн / Mon
+			"****???__****???__****??", // 2 = Вт / Tue
+			"?__****???__****???__***", // 3 = Ср / Wed
+			"*???__****???__****???__", // 4 = Чт / Thu
+			"****???__****???__****??", // 5 = Пт / Fri
+			"?__****???__****???__***", // 6 = Сб / Sat
+			"*???__****???__****???__", // 7 = Нд / Sun
 		], 
-		[	"",	// group 2
-		    //12345678901234567890123
-			"???****__???****__???***", // 1 = Пн / Mon
-			"*__???****__???****__???", // 2 = Вт / Tue
-			"****__???****__???****__", // 3 = Ср / Wed
-			"???****__???****__???***", // 4 = Чт / Thu
-			"*__???****__???****__???", // 5 = Пт / Fri
-			"****__???****__???****__", // 6 = Сб / Sat
-			"???****__???****__???***", // 7 = Нд / Sun
-		],
-		[	"",	// group 3
-		    //12345678901234567890123
-			"*__???****__???****__???", // 1 = Пн / Mon
-			"****__???****__???****__", // 2 = Вт / Tue
-			"???****__???****__???***", // 3 = Ср / Wed
-			"*__???****__???****__???", // 4 = Чт / Thu
-			"****__???****__???****__", // 5 = Пт / Fri
-			"???****__???****__???***", // 6 = Сб / Sat
-			"*__???****__???****__???", // 7 = Нд / Sun
-		],
 	];
 
 	const selector = document.getElementById('selector');
